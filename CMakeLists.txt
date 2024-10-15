@@ -21,5 +21,4 @@ elseif(UNIX)
     )
 endif()
 # 设置库的包含目录
-target_include_directories(XuCommunications PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/3rd")
-
+target_include_directories(XuCommunications PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/3rd" "${CMAKE_CURRENT_SOURCE_DIR}/Src")
