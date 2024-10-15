@@ -13,7 +13,10 @@ target_link_libraries(XuCommunications Qt6::Core)
 # 创建共享库
 
 if(WIN32)
-    message(STATUS "Configuring for Windows")
+    set_target_properties(XuCommunications PROPERTIES
+        LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../Libs/Windows/$<CONFIG>/"
+        ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../Libs/Windows/$<CONFIG>/"
+    )
 elseif(UNIX)
     set_target_properties(XuCommunications PROPERTIES
         LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../Libs/Linux/$<CONFIG>/"
